@@ -6,7 +6,7 @@ export const Logo = ({
 }) => {
     return (
         <div className="w-32 px-5 mb-5">
-            <img src={LogoImage} alt="logo" className="{`w-${width} h-${height}`}"/>
+            <img src={LogoImage} alt="logo" className={`w-${width} h-${height}`}/>
         </div>
     )
 }
