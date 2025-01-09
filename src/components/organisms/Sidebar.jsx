@@ -1,6 +1,7 @@
 import { SidebarNavigationMenu } from "../atoms/SidebarNavigationMenu";
 import { Logo } from "../atoms/Logo";
 import { Divider } from "../atoms/Divider";
+import { SidebarPlaylist } from "../molecules/SidebarPlaylist";
 
 export const Sidebar = () => {
     return (
@@ -11,6 +12,8 @@ export const Sidebar = () => {
                 <SidebarNavigationMenu />
 
                 <Divider />
+
+                <SidebarPlaylist />
             </div>
         </div>
     ); 
