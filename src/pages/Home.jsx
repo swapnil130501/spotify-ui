@@ -1,11 +1,10 @@
+import { ProfileBanner } from "../components/atoms/ProfileBanner"
 import { GradientWrapper } from "../components/molecules/GradientWrapper"
 
 export const Home = () => {
     return (
         <GradientWrapper>
-            <div>
-                Home
-            </div>
+            <ProfileBanner />
         </GradientWrapper>
     )
 }
