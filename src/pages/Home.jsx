@@ -6,11 +6,7 @@ export const Home = () => {
     const artists = [
         { id: 1, name: "The Weeknd", image: "https://robohash.org/weeknd" },
         { id: 2, name: "Kendrick Lamar", image: "https://robohash.org/artist2" },
-        {
-            id: 3,
-            name: "Future",
-            image: "https://robohash.org/artist3"
-        }
+        { id: 3, name: "Future", image: "https://robohash.org/artist3" }
     ]
 
     return (
@@ -31,7 +27,7 @@ export const Home = () => {
                     
                     <div className="flex">
                         {artists.map((it) => (
-                            <div key={it.id} className="px-2 w-1/5"> 
+                            <div key={it.id} className="px-2 w-1/8"> 
 
                                 <div className="p-4 rounded-lg bg-gray-900">
                                     <img src={it.image} className="w-full h-auto rounded-full"/>

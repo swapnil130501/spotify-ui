@@ -13,7 +13,7 @@ export const ProfileBanner = () => {
                     Profile
                 </p>
 
-                <h1 className="text-6xl font-bold">
+                <h1 className="text-6xl font-bold mb-5">
                     Swapnil
                 </h1>
 
