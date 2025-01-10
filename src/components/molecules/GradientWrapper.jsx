@@ -1,6 +1,6 @@
-export const GradientWrapper = ({ fromColor = 'indigo-800', viaColor = 'indigo-900', toColor='black', children }) => {
+export const GradientWrapper = ({ children }) => {
     return (
-        <div className={`h-full overflow-y-auto bg-gradient-to-b from-${fromColor} via-${viaColor} to-${toColor}`}>
+        <div className={`h-full overflow-y-auto bg-gradient-to-b from-indigo-800 via-indigo-900 to-black`}>
             {children}
         </div>
     )
