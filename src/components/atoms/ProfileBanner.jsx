@@ -1,6 +1,6 @@
 export const ProfileBanner = () => {
     return (
-        <div className="bg-indigo-1000 p-10 flex items-end">
+        <div className="bg-indigo-1000 p-10 flex">
             <div p-5>
                 <img 
                     src={'http://robohash.org/swapnil'}
@@ -8,16 +8,16 @@ export const ProfileBanner = () => {
                 />
             </div>
 
-            <div className="p-5 leading-10 text-white">
+            <div className="p-10 leading-10 text-white ">
                 <p className="text-xs font-bold uppercase">
                     Profile
                 </p>
 
-                <h1 className="text-6xl font-bold mb-5">
+                <h1 className="text-6xl font-bold">
                     Swapnil
                 </h1>
 
-                <p className="text-xs">
+                <p className="text-md">
                     Public Playlist
                 </p>
             </div>
