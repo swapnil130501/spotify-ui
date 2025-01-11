@@ -1,5 +1,6 @@
 import React from 'react'
 import { Sidebar } from '../components/organisms/Sidebar'
+import { Player } from '../components/organisms/Player'
 
 function PlayerLayout({ children }) {
     return (
@@ -14,7 +15,8 @@ function PlayerLayout({ children }) {
                 </div>
             </div>
 
-            <div className='absolute bottom-0 left-0 w-screen h-[100px] bg-gray-900'> 
+            <div className="absolute bottom-0 left-0 w-screen h-[100px]"> 
+                <Player />
             </div>
 
         </div>
