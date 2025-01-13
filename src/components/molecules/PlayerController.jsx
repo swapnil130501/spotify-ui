@@ -48,9 +48,50 @@ export const PlayerController = () => {
         duration: 0.0
     });
 
-    useEffect(() => {
-        console.log(songs[playerState.index].url);
-    }, [playerState])
+    function nextSong() {
+        if(playerState.shuffle) {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            setPlayerState({
+                ...playerState,
+                index: (randomIndex === playerState.index) ? (randomIndex + 1) %  songs.length : randomIndex,
+                playing: true
+            })
+        }
+
+        else {
+            setPlayerState({
+                ...playerState,
+                index: (playerState.index + 1) % songs.length,
+                playing: true
+            })
+        }
+    }
+
+    function prevSong() {
+        if(playerState.shuffle) {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            setPlayerState({
+                ...playerState,
+                index: (randomIndex === playerState.index) ? (randomIndex + 1) %  songs.length : randomIndex,
+                playing: true
+            })
+        }
+
+        else {
+            setPlayerState({
+                ...playerState,
+                index: (playerState.index - 1 + songs.length) % songs.length,
+                playing: true
+            })
+        }
+    }
+
+    function toggleShuffle() {
+        setPlayerState({
+            ...playerState,
+            shuffle: !playerState.shuffle
+        })
+    }
 
     return (
         <div className="text-white">
@@ -62,11 +103,14 @@ export const PlayerController = () => {
             <div
                 className="flex justify-center items-center space-x-4 py-4 text-gray-400"
             >
-                <button>
+                <button
+                    onClick={toggleShuffle}
+                >
                     <MdShuffle />
                 </button>
 
                 <button
+                    onClick={prevSong}
                     className="text-2xl"
                 >
                     <MdSkipPrevious />
@@ -93,6 +137,7 @@ export const PlayerController = () => {
                 
 
                 <button
+                    onClick={nextSong}
                     className="text-2xl"
                 >
                     <MdSkipNext />
